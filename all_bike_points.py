@@ -68,3 +68,4 @@ else:
     data = response.json()  # Parse the JSON response
     error_message = data.get("message", "No message provided.")  # Get the error message
     print(f'Error {response.status_code}:{error_message}')  # Print the error code and message
+    

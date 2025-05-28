@@ -17,5 +17,3 @@ def load_to_s3(filename):
     )
 
     s3_client.upload_file(filename, bucket, filename)
-
-load_to_s3('2025-05-13T12-34-13-25ZBikePoints_17.json')
