@@ -8,7 +8,7 @@ on:
 jobs:
   run-extract:
     runs-on: ubuntu-latest
-    environment: .env
+    environment: 'bike point environment'
 
     env:
       AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
