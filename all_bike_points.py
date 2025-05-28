@@ -6,7 +6,7 @@ import boto3
 from dotenv import load_dotenv
 from load_test import load_to_s3
 
-load_dotenv()
+# load_dotenv()
 
 access_key = os.getenv('AWS_ACCESS_KEY')
 secret_access_key = os.getenv('AWS_SECRET_ACCESS_KEY')
