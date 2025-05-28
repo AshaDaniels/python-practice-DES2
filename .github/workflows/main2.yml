@@ -8,6 +8,7 @@ on:
 jobs:
   run-extract:
     runs-on: ubuntu-latest
+    environment: .env
 
     env:
       AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
