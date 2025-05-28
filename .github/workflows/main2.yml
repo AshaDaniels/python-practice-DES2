@@ -26,9 +26,5 @@ jobs:
       - name: Install dependencies
         run: pip install requests boto3 python-dotenv
 
-      - name: Print environment variables (for debugging)
-        run: |
-          echo "AWS_BUCKET_NAME=$AWS_BUCKET_NAME"
-
       - name: Run script
         run: python all_bike_points.py
