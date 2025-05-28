@@ -1,6 +1,5 @@
 name: All Bike Points Extract V2
 
-
 on:
   schedule:
     - cron: '50 12 * * *' # Runs every day at 13:50 UK time (12:50 UTC)
