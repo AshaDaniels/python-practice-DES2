@@ -1,0 +1,30 @@
+name: All Bike Points Extract
+
+on:
+  schedule:
+    - cron: '50 12 * * *' # Runs every day at 13:50 UK time (12:50 UTC)
+  workflow_dispatch:
+
+jobs:
+  run-extract:
+    runs-on: ubuntu-latest
+
+    env:
+      AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install requests boto3 python-dotenv
+
+      - name: Run script
+        run: python all_bike_points.py
