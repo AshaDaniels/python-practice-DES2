@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 def load_to_s3(filename):
     
-    load_dotenv()
+    # load_dotenv()
 
     access_key = os.getenv('AWS_ACCESS_KEY')
     secret_access_key = os.getenv('AWS_SECRET_ACCESS_KEY')
